@@ -1,0 +1,86 @@
+@use '../media' as media;
+@use '../variables' as vars;
+
+.nav {
+    display: block;
+    
+    @media #{media.$tablet-min} {
+        z-index: 3;
+        width: 100%;
+    }
+
+    @media #{media.$tablet-interval} {
+        width: 374px;
+    }
+
+    @media #{media.$tablet-max} {
+        position: absolute;
+        top: 100%;
+        right: -1000px;
+        height: calc(100vh - 100%);
+        background-color: vars.$background-gray;
+        transition: right 300ms linear;
+    }
+
+    @media #{media.$desktop} {
+        margin: 0 15px;
+    }
+
+    &--active {
+        @media #{media.$tablet-max} {
+            right: 0;
+            transition: right 300ms linear;
+        }
+    }
+
+    &__list {
+        display: flex;
+
+        @media #{media.$tablet-max} {
+            flex-direction: column;
+        }
+
+        @media #{media.$desktop} {
+            flex-wrap: wrap;
+            gap: 15px 40px;
+        }
+    }
+
+    &__item {
+        display: inline-block;
+        box-sizing: border-box;
+
+        @media #{media.$tablet-max} {
+            border-bottom: 1px solid vars.$background-gray;
+            background-color: vars.$gray;
+        }
+
+        @media #{media.$desktop} {
+            padding: 8px 18px;
+        }
+    }
+
+    &__item-text {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
+        @media #{media.$tablet-max} {
+            text-align: start;
+            display: inline-block;
+            font-size: 16px;
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        @media #{media.$desktop} {
+            cursor: pointer;
+            max-width: 200px;
+
+            &:hover {
+                color: vars.$red;
+            }
+        }
+    }
+}

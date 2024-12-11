@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/img/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>h.M</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/style.scss">
+  </head>
+  <body class="body">
+    <header class="header">
+      <div class="header__container">
+        <img src="/src/img/logo.svg" class="header__logo" alt="h.M logo" />
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__item-text">
+              Главная
+            </a>
+          </li>
+          <li class="nav__item multiple-menu multiple-menu--bottom">
+            <button type="button" class="nav__item-text">
+              Основное меню
+            </button>
+            <ul class="multiple-menu__list multiple-menu__list--bottom">
+              <li class="multiple-menu__item">
+                <a href="#" class="multiple-menu__item-text">
+                  Заказать вёрстку
+                </a>
+              </li>
+              <li class="multiple-menu__item">
+                <a href="#" class="multiple-menu__item-text">
+                  Отправить макет на проверку    
+                </a>
+              </li>
+              <li class="multiple-menu__item">
+                <a href="#" class="multiple-menu__item-text">
+                  Хочу работать у вас
+                </a>
+              </li>
+              <li class="multiple-menu__item multiple-menu multiple-menu--right">
+                <button type="button" class="multiple-menu__item-text">
+                  Есть предложение по работе с клиентами
+                </button>
+                <ul class="multiple-menu__list multiple-menu__list--right">
+                  <li class="multiple-menu__item">
+                    <a href="#" class="multiple-menu__item-text">
+                      У меня есть оффер
+                    </a>
+                  </li>
+                  <li class="multiple-menu__item">
+                    <a href="#" class="multiple-menu__item-text">
+                      Сделать партнёром
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__item-text">
+              Наши сервисы
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__item-text">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <a href="tel:+13212223333" class="phone">
+        <img src="/src/img/phone.svg" class="phone__icon" alt="h.M phone" />
+        <span  class="phone__number">+1 (321) 222 - 33 -33</span>     
+      </a>
+      <button class="header__toggle">
+        <span class="header__toggle-icon">
+            <span class="visually-hidden">Меню</span>
+        </span>
+    </button>
+      </div>
+      
+    </header>
+
+    <main class="main">
+      <picture class="main__picture">
+        <source type="image/webp" media="(max-width: 767px)" srcset="src/img/main-image-tablet-mobile.webp 1x, src/img/main-image-tablet-mobile-2x.webp 2x">
+        <source type="image/webp" srcset="src/img/main-image-desktop.webp 1x, src/img/main-image-desktop-2x.webp 2x">
+        <img class="main__image" data-src="src/img/main-image-desktop.png" alt="Alpaca">
+      </picture>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+@use '../variables' as vars;
+@use '../media' as media;
+
+.phone {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+
+    @media #{media.$mobile} {
+        margin-left: auto;
+    }
+
+    &__icon {
+        margin-right: 10px;
+    }
+
+    &__number {
+        text-wrap: nowrap;
+
+        @media #{media.$mobile} {
+            display: none;
+        }
+
+        
+        @media #{media.$desktop} {
+            &:hover {
+                color: vars.$red;
+            }
+        }
+    }
+}

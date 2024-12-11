@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/*Брейкпоинты*/
+.nav {
+  display: block;
+  margin: 0 15px;
+}
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 40px;
+}
+.nav__item {
+  display: inline-block;
+  padding: 8px 18px;
+  box-sizing: border-box;
+}
+.nav__item-text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@media screen and (min-width: 769px) {
+  .nav__item-text {
+    cursor: pointer;
+    max-width: 200px;
+  }
+  .nav__item-text:hover {
+    color: #EB5757;
+  }
+}/*# sourceMappingURL=nav.css.map */

@@ -1,0 +1,38 @@
+@use '../media' as media;
+@use '../variables' as vars;
+
+    .main {
+    position: relative;
+    flex-grow: 1;
+    width: 100%;
+    overflow: hidden;
+    
+    &--active-mobile-menu {
+        @media #{media.$tablet-min} {
+            &::after {
+                z-index: 2;
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: vars.$overlay;
+                z-index: 2;
+          }
+        }
+    }
+
+    &__picture {
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover; 
+    }
+}

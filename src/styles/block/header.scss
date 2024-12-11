@@ -1,0 +1,87 @@
+@use '../media' as media;
+@use '../variables' as vars;
+
+.header {
+    box-shadow: 0 4 4 0 vars.$dark-gray;
+    width: 100%;
+
+    @media #{media.$tablet-max} {
+        
+    }
+
+    @media #{media.$desktop} {
+    }
+
+    &__container {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 17px 22px 13px;
+        box-sizing: border-box;
+
+        @media #{media.$tablet-max} {
+        }
+    
+        @media #{media.$desktop} {
+            max-width: 1240px;
+            margin: 0 auto;
+        }
+    }
+
+    &__logo {
+        width: 46px;
+        height: 46px;
+
+         @media #{media.$desktop} {
+            padding-right: 64px;
+        }
+    }
+
+    &__toggle {
+        @media #{media.$tablet-max} {
+            width: 30px;
+            height: 30px;
+            padding: 8px 4px;
+        }
+
+        @media #{media.$desktop} {
+            display: none;
+        }
+
+        &-icon {
+            position: relative;
+            display: block;
+            width: 22px;
+            height: 2px;
+            margin: 6px 0;
+            box-sizing: border-box;
+            background-color: vars.$orange;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: -7px;
+                display: block;
+                width: 22px;
+                height: 2px;
+                background-color: vars.$orange;
+                
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -7px;
+                display: block;
+                width: 22px;
+                height: 2px;
+                background-color: vars.$orange;
+
+            }
+        }
+    }
+}
